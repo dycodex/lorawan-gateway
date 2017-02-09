@@ -1,0 +1,13 @@
+
+[Unit]
+Description=LoRaWAN Gateway
+
+[Service]
+WorkingDirectory=/opt/lorawan-gateway/bin/
+ExecStart=/opt/lorawan-gateway/bin/start.sh
+SyslogIdentifier=lorawan-gateway
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
